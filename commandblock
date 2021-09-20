@@ -50,6 +50,8 @@ execute at @a[scores={sla=20..}] run say 1 segundo
 ## Parte 3 Comamdo do Tempo ##
 execute as @a[scores={sla=20..}] at @s run scoreboard players reset @s sla
 
-comando virar mob execute as @e[tag=teste] at @s run tp @s gamerhardcore68
+## Comando Virar Mob ##
+execute as @e[tag=teste] at @s run tp @s gamerhardcore68
 
-parte 2 /summon minecraft:cow ~ ~1 ~ {NoAI:1,Tags:["teste"]}
+## Parte 2 ##
+/summon minecraft:cow ~ ~1 ~ {NoAI:1,Tags:["teste"]}
