@@ -41,11 +41,14 @@ replaceitem entity @a[tag=Wolverine] armor.chest minecraft:leather_chestplate{di
 ## Caminho de Gelo ##
 execute at @a run setblock ~ ~-1 ~ ice
 
-comando tempo scoreboard players add @a sla 1
+## Comando Tempo ##
+scoreboard players add @a sla 1
 
-parte 2 comando de tempo execute at @a[scores={sla=20..}] run say 1 segundo
+## Parte 2 Comando de Tempo ##
+execute at @a[scores={sla=20..}] run say 1 segundo
 
-parte 3 comamdo do tempo execute as @a[scores={sla=20..}] at @s run scoreboard players reset @s sla
+## Parte 3 Comamdo do Tempo ##
+execute as @a[scores={sla=20..}] at @s run scoreboard players reset @s sla
 
 comando virar mob execute as @e[tag=teste] at @s run tp @s gamerhardcore68
 
