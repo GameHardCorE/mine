@@ -1,18 +1,23 @@
-bola de neve esplosiva execute at @e[type=minecraft:snowball] run summon minecraft:creeper ~ ~1 ~ {ExplosionRadius:1,Fuse:0,ignited:1}
+## Bola de neve Esplosiva ##
+/execute at @e[type=minecraft:snowball] run summon minecraft:creeper ~ ~1 ~ {ExplosionRadius:1,Fuse:0,ignited:1}
 
-espada suprema /give @p minecraft:diamond_sword{Unbreakable:1,Enchantments:[{id:sharpness,lvl:90000}, {id:knockback,lvl:90000}, {id:fire_aspect,lvl:90000},{id:smite,lvl:90000}]}
+## Espada Poderosa ##
+/give @p minecraft:diamond_sword{Unbreakable:1,Enchantments:[{id:sharpness,lvl:90000}, {id:knockback,lvl:90000}, {id:fire_aspect,lvl:90000},{id:smite,lvl:90000}]}
 
-Mob sem cerebro /summon minecraft:creeper ~ ~ ~ {NoAI:1b}
+## Mob Parado ##
+/summon minecraft:creeper ~ ~ ~ {NoAI:1b}
  
-chat /tellraw @a {"text":"<oi> oi"}
+## Chat ##
+/tellraw @a {"text":"<oi> oi"}
 
-butao comando /execute if block 1 15 -78 minecraft:stone_button[powered=true] run setblock -3 5 -87 minecraft:redstone_block
+## Comando de Butão sem o Bloco de Comando Estiver atraz da Parede ##
+/execute if block 1 15 -78 minecraft:stone_button[powered=true] run setblock -3 5 -87 minecraft:redstone_block
 
-comando particula particle minecraft:dust 1 1 0 10 -2 4 -22 10 10 10 0 5
+## Particula Normal ##
+particle minecraft:bubble 146 1 -213 0 0 0 0.01 10
 
-particula normal particle minecraft:bubble 146 1 -213 0 0 0 0.01 10
-
-comando distancia execute as @a[distance=..2] at @s run tp @s ~ ~100 ~
+## Comando Distancia para Ccontercer alguma Coisa  ##
+execute as @a[distance=..2] at @s run tp @s ~ ~100 ~
 
 ## Atravessar Bloco ## 
 summon minecraft:falling_block ~2 ~0 ~0 {NoGravity:1b,BlockState:{Name:"minecraft:stone"}}
@@ -20,14 +25,18 @@ summon minecraft:falling_block ~2 ~0 ~0 {NoGravity:1b,BlockState:{Name:"minecraf
 ## Comamdo pisar no Bloco ##  
 execute at @a[tag=ta] if block ~ ~-1 ~ minecraft:prismarine_slab run tp @a[tag=ta] -53.00 7.97 -232.51
 
-item frame invisivel /give @p item_frame{EntityTag:{Invisible:1}}
+## Item Frame Invisivel ##
+/give @p item_frame{EntityTag:{Invisible:1}}
 
 
-segurar item poder   execute at @a[tag=NOME,scores={NOME=1..},nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",tag:{display:{Name:'{"text":"NOME"}'}}}}] run say 1
+## Segurar item Poder ##
+execute at @a[tag=NOME,scores={NOME=1..},nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",tag:{display:{Name:'{"text":"NOME"}'}}}}] run say 1
 
-parte 2 scoreboard players reset @a[tag=NOME] NOME
+## Parte 2 Segurar Item Poder ##
+scoreboard players reset @a[tag=NOME] NOME
 
-comando equipar armadura replaceitem entity @a[tag=Wolverine] armor.chest minecraft:leather_chestplate{display:{color:16380959}}
+## Comando Equipar Armadura ## não tem para 1.17
+replaceitem entity @a[tag=Wolverine] armor.chest minecraft:leather_chestplate{display:{color:16380959}}
 
 caminho de gelo execute at @a run setblock ~ ~-1 ~ ice
 
