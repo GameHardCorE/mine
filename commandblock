@@ -14,9 +14,10 @@ particula normal particle minecraft:bubble 146 1 -213 0 0 0 0.01 10
 
 comando distancia execute as @a[distance=..2] at @s run tp @s ~ ~100 ~
 
-atravessar bloco summon minecraft:falling_block ~2 ~0 ~0 {NoGravity:1b,BlockState:{Name:"minecraft:stone"}}
+## Atravessar Bloco ## 
+summon minecraft:falling_block ~2 ~0 ~0 {NoGravity:1b,BlockState:{Name:"minecraft:stone"}}
 
-##comamdo pisar no bloco##  
+## Comamdo pisar no Bloco ##  
 execute at @a[tag=ta] if block ~ ~-1 ~ minecraft:prismarine_slab run tp @a[tag=ta] -53.00 7.97 -232.51
 
 item frame invisivel /give @p item_frame{EntityTag:{Invisible:1}}
