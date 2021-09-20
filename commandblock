@@ -38,7 +38,8 @@ scoreboard players reset @a[tag=NOME] NOME
 ## Comando Equipar Armadura ## não tem para 1.17
 replaceitem entity @a[tag=Wolverine] armor.chest minecraft:leather_chestplate{display:{color:16380959}}
 
-caminho de gelo execute at @a run setblock ~ ~-1 ~ ice
+## Caminho de Gelo ##
+execute at @a run setblock ~ ~-1 ~ ice
 
 comando tempo scoreboard players add @a sla 1
 
